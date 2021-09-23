@@ -11,7 +11,7 @@ const Header = props => {
     <header>
       <div className="title">
         <Link className="title-link" to="./">
-          wow<span>classic</span>population.<span>com</span>
+          Wow<span>Classic</span>Pop.<span>com</span>
         </Link>
       </div>
       <nav>
