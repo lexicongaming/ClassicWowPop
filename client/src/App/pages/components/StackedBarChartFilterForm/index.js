@@ -76,7 +76,7 @@ export default function StackedBarChartFilterForm({ onChange }) {
   }
 
   function resetForm() {
-    setSelectedLevel([1, 60]);
+    setSelectedLevel([1, 70]);
     setSelectedLastSeen('');
     onChange({});
   }
@@ -87,7 +87,7 @@ export default function StackedBarChartFilterForm({ onChange }) {
     if (minLevel !== 1) {
       query.minLevel = minLevel;
     }
-    if (maxLevel !== 60) {
+    if (maxLevel !== 70) {
       query.maxLevel = maxLevel;
     }
     if (selectedLastSeen !== '') {
@@ -135,7 +135,7 @@ export default function StackedBarChartFilterForm({ onChange }) {
             onChange={handleLevelChange}
             valueLabelDisplay="auto"
             classes={{ rail: 'fix-slider-rail' }}
-            max={60}
+            max={70}
             min={1}
           />
         </div>
