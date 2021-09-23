@@ -9,6 +9,8 @@ const UNDEAD = { label: 'Undead', value: 'undead' };
 const ORC = { label: 'Orc', value: 'orc' };
 const TAUREN = { label: 'Tauren', value: 'tauren' };
 const TROLL = { label: 'Troll', value: 'troll' };
+const BLOODELF = { label: 'Blood Elf', value: 'blood_elf' };
+const DRAENEI = { label: 'Draenei', value: 'draenei' };
 
 const WARRIOR = { label: 'Warrior', value: 'warrior' };
 const PALADIN = { label: 'Paladin', value: 'paladin' };
@@ -25,12 +27,12 @@ export const getFactions = () => {
 };
 
 export const getRacesByFaction = faction => {
-  if (faction === '') return [HUMAN, DWARF, GNOME, NIGHTELF, UNDEAD, ORC, TAUREN, TROLL];
+  if (faction === '') return [HUMAN, DWARF, GNOME, NIGHTELF, DRAENEI, UNDEAD, ORC, TAUREN, TROLL, BLOODELF];
   switch (faction.value) {
     case ALLIANCE.value:
-      return [HUMAN, DWARF, GNOME, NIGHTELF];
+      return [HUMAN, DWARF, GNOME, NIGHTELF, DRAENEI];
     case HORDE.value:
-      return [UNDEAD, ORC, TAUREN, TROLL];
+      return [UNDEAD, ORC, TAUREN, TROLL, BLOODELF];
     default:
       return undefined;
   }
@@ -49,6 +51,8 @@ export const getClassesByRace = race => {
       return [WARRIOR, ROGUE, MAGE, WARLOCK];
     case NIGHTELF.value:
       return [WARRIOR, HUNTER, ROGUE, PRIEST, DRUID];
+    case DRAENEI.value:
+      return [WARRIOR, HUNTER, PRIEST, PALADIN, SHAMAN, MAGE];
     case UNDEAD.value:
       return [WARRIOR, ROGUE, PRIEST, MAGE, WARLOCK];
     case ORC.value:
@@ -57,6 +61,8 @@ export const getClassesByRace = race => {
       return [WARRIOR, HUNTER, SHAMAN, DRUID];
     case TROLL.value:
       return [WARRIOR, HUNTER, ROGUE, PRIEST, SHAMAN, MAGE];
+    case BLOODELF.value:
+      return [HUNTER, MAGE, PALADIN, PRIEST, ROGUE, WARLOCK];
     default:
       return undefined;
   }
@@ -66,8 +72,8 @@ export const getClassesByFaction = faction => {
   if (faction === '')
     return [WARRIOR, PALADIN, SHAMAN, ROGUE, HUNTER, MAGE, PRIEST, DRUID, WARLOCK];
   return faction.value === ALLIANCE.value
-    ? [WARRIOR, PALADIN, ROGUE, HUNTER, MAGE, PRIEST, DRUID, WARLOCK]
-    : [WARRIOR, SHAMAN, ROGUE, HUNTER, MAGE, PRIEST, DRUID, WARLOCK];
+    ? [WARRIOR, PALADIN, ROGUE, HUNTER, MAGE, PRIEST, DRUID, WARLOCK, SHAMAN]
+    : [WARRIOR, SHAMAN, ROGUE, HUNTER, MAGE, PRIEST, DRUID, WARLOCK, PALADIN];
 };
 
 export const getClasses = () => getClassesByRace('');
