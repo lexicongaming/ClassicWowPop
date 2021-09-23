@@ -77,7 +77,7 @@ export default function BarChartFilterForm({ realmOptions, onChange }) {
   const [selectedFaction, setSelectedFaction] = React.useState('');
   const [selectedRace, setSelectedRace] = React.useState('');
   const [selectedClass, setSelectedClass] = React.useState('');
-  const [selectedLevel, setSelectedLevel] = React.useState([1, 60]);
+  const [selectedLevel, setSelectedLevel] = React.useState([1, 70]);
   const [selectedLastSeen, setSelectedLastSeen] = React.useState('');
 
   const [factionOptions] = React.useState(getFactions());
@@ -147,7 +147,7 @@ export default function BarChartFilterForm({ realmOptions, onChange }) {
     setSelectedFaction('');
     setSelectedRace('');
     setSelectedClass('');
-    setSelectedLevel([1, 60]);
+    setSelectedLevel([1, 70]);
     setSelectedLastSeen('');
     onChange({});
   }
@@ -170,7 +170,7 @@ export default function BarChartFilterForm({ realmOptions, onChange }) {
     if (minLevel !== 1) {
       query.minLevel = minLevel;
     }
-    if (maxLevel !== 60) {
+    if (maxLevel !== 70) {
       query.maxLevel = maxLevel;
     }
     if (selectedLastSeen !== '') {
@@ -300,7 +300,7 @@ export default function BarChartFilterForm({ realmOptions, onChange }) {
             onChange={handleLevelChange}
             valueLabelDisplay="auto"
             classes={{ rail: 'fix-slider-rail' }}
-            max={60}
+            max={70}
             min={1}
           />
         </div>
