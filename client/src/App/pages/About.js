@@ -6,13 +6,9 @@ const About = () => {
     <div className="App">
       <h1>About</h1>
       <div className="box-wrapper normal">
-        <h2>What is the project about?</h2>
+        <h2>Why?</h2>
         <p>
-          I&apos;m collecting character data from the WoW Classic realms. This data includes
-          character name, realm, faction, race, class, level, guild and an activity snapshot that
-          captures how many people were concurrently online at a specific time. This data is
-          funneled into an online database, so that some fancy charts can be generated out of it so
-          that everyone can have an easy look on it.
+          We are collecting WoW TBC Classic population information to help understand trends within the servers. Character information such as Name, Guild, Level, Class and race, help us determin when players are playing, guild growths, Server activity, and other things we haven't even thought of us. Since many Wow TBC servers change in population with such frequency, undertanding that may help us as players(maybe even the developers) know what servers to play on, or move to/from.
         </p>
         <h2>How did you get the numbers?</h2>
         <p>
@@ -23,15 +19,12 @@ const About = () => {
         </p>
         <h2>Who made this website?</h2>
         <p>
-          Currently I&apos;m working alone on this project and I&apos;ve collected the initial
-          character data samples by myself, but more and more people start collecting and submitting
-          data and I would really appreciate it if even more people would join, so that we can grow
-          an adequate sample size.
+          At this time, I am the only person working on this project. However, I would LOVE for help in building this into somthing amazing! You can find our discord below, or Find me (Statichands) on the Atiesh TBC Server on alliance.
         </p>
-        <h2>What is the goal</h2>
+        <!--<h2>What is the goal</h2>
         <p>
 At the moment, it simply to provide an area for Wow players, guild master/recruiters, and such to help determin what kind of Race/Class they can look to get, to help better their raid teams.
-        </p>
+        </p>-->
         <h2>How can I contribute</h2>
         <p>
           It is highly appriciated that you install
