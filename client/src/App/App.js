@@ -41,6 +41,7 @@ class App extends Component {
             </p>
             <p>
             WowClassicPop.com is a rebuild system from <a href="https://github.com/christophrus/wowclassicpopulation.com">Christophrus</a>
+            </p>
           </footer>
         </main>
       </div>
