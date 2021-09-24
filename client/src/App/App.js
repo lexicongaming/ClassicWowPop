@@ -40,7 +40,7 @@ class App extends Component {
               in the U.S. and/or other countries.
             </p>
             <p>
-            WowClassicPop.com is a rebuild system from <a href="https://github.com/christophrus/wowclassicpopulation.com">Christophrus</a>
+            WowClassicPop.com is a system rebuilt using the original script created by <a href="https://github.com/christophrus/">Christophrus</a>. The Current site is developed by <a href="https://github.com/scarecr0w12">Scarecr0w12</a>
             </p>
           </footer>
         </main>
