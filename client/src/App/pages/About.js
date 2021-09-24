@@ -21,10 +21,10 @@ const About = () => {
         <p>
           At this time, I am the only person working on this project. However, I would LOVE for help in building this into somthing amazing! You can find our discord below, or Find me (Statichands) on the Atiesh TBC Server on alliance.
         </p>
-        <!--<h2>What is the goal</h2>
+        <h2>What is the goal</h2>
         <p>
 At the moment, it simply to provide an area for Wow players, guild master/recruiters, and such to help determin what kind of Race/Class they can look to get, to help better their raid teams.
-        </p>-->
+        </p>
         <h2>How can I contribute</h2>
         <p>
           It is highly appriciated that you install
