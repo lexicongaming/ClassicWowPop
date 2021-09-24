@@ -34,7 +34,7 @@ class App extends Component {
               </li>
             </ul>
             <p>
-              WowClassicPopulation uses names and images from World of Warcraft, and data
+              WowClassicPop uses names and images from World of Warcraft, and data
               proprietary to Blizzard Entertainment, Inc. World of Warcraft, Warcraft and Blizzard
               Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc.
               in the U.S. and/or other countries.

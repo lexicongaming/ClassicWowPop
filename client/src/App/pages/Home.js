@@ -43,8 +43,8 @@ const Home = () => {
   }
 
   const description =
-    'A project with the goal to take a full census of active players on all World of Warcraft: Classic realms';
-  const title = '>Wow Classic Population - A census project';
+    'A project with the goal to take a full census of active players on all World of Warcraft: TBC Classic realms';
+  const title = '>Wow Classic Pop - A census project';
 
   return (
     <div className="App">
@@ -56,9 +56,9 @@ const Home = () => {
         <meta name="twitter:title" content={title} />
         <title>{title}</title>
       </Helmet>
-      <h1>Wow Classic Population - A census project</h1>
+      <h1>Wow Classic Pop - A census project</h1>
       <p className="intro">
-        We are collecting census data from the World of Warcraft: Classic realms with the help of an
+        We are collecting census data from the World of Warcraft: TBC Classic realms with the help of an
         ingame addon and visualizes it in some fancy, filterable charts.
       </p>
       <div className="box-wrapper normal">
@@ -68,11 +68,11 @@ const Home = () => {
           This project is highly dependant on community participation, because the statistics are
           only as good as of how many people have the{' '}
           <a
-            href="https://github.com/christophrus/CensusPlusClassic/releases"
+            href="https://www.curseforge.com/wow/addons/censusplustbc"
             target="_blank"
             rel="noopener noreferrer"
           >
-            CensusPlusClassic addon
+            CensusPlusTBC addon
           </a>{' '}
           installed and submit their collected data to the website. If you wanna participate in
           improving the significance of the samples, just start collecting data while you&apos;re
@@ -87,7 +87,7 @@ const Home = () => {
         </p>
       </div>
       <div className="discord-cta">
-        <a href="https://discord.gg/MYPWGkv" target="_blank" rel="noopener noreferrer">
+        <a href="https://discord.gg/DjcXKtKr88" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon size="7x" icon={faDiscord} />
           <p>
             Join the <br /> project <br /> discord

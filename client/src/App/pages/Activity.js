@@ -89,8 +89,8 @@ class Activity extends Component {
     }
 
     const description =
-      'Realm activity gives an overview about the active players concurrently online on Wow Classic realms in chart form';
-    const title = 'Population activity overview - Wow Classic population census project';
+      'Realm activity gives an overview about the active players concurrently online on Wow TBC Classic realms in chart form';
+    const title = 'Population activity overview - Wow Classic Pop census project';
 
     return (
       <div className="App">
@@ -116,9 +116,9 @@ class Activity extends Component {
           />
         )}
         <p className="intro" style={{ marginTop: '10px' }}>
-          The activity charts can give you a good idea about the active Wow Classic Population and
-          how many people are playing WoW Classic. Currently there is census data from the most Wow
-          Classic realms but this project aims to provide data from all the realms as well. Keep in
+          The activity charts can give you a good idea about the active Wow TBC Classic Population and
+          how many people are playing WoW TBC Classic. Currently there is census data from the most Wow
+          TBC Classic realms but this project aims to provide data from all the realms as well. Keep in
           mind that the data is only as good, as of how many people are uploading their data. You
           maybe need to select a specific time frame to get more meaningful results.
         </p>

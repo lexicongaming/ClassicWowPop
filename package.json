@@ -1,14 +1,14 @@
 {
-  "name": "wow-classic-population",
+  "name": "wow-classic-pop",
   "version": "1.0.0",
-  "description": "",
+  "description": "A World of warcraft: TBC Classic Census system to help players see populations on servers.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon -L index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Scarecr0w12",
   "license": "ISC",
   "dependencies": {
     "cachegoose": "^8.0.0",

@@ -112,7 +112,7 @@ const CharacterChart = props => {
           <p>No data found for this selection</p>
           <h2 className="highlight">Your help is wanted!</h2>
           <p>
-            If you&apos;re playing World of Warcraft: Classic {realmAndFaction} you could start
+            If you&apos;re playing World of Warcraft: TBC Classic {realmAndFaction} you could start
             collecting data and upload it to our database
           </p>
           <p>

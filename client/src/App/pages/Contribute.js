@@ -84,7 +84,7 @@ const Contribute = () => {
       <div>
         {ErrorPanel}
         <h2>Upload data</h2>
-        <p>Select your CensusPlusClassic.lua (instruction see above)</p>
+        <p>Select your CensusPlusTBC.lua (instruction see above)</p>
         <input
           accept=".lua"
           className={classes.input}
@@ -132,8 +132,8 @@ const Contribute = () => {
   };
 
   const description =
-    'How to upload census data to the Wow Classic population census project and how to install the CensusPlusClassic addon.';
-  const title = 'How to contribute to the Wow Classic population census project';
+    'How to upload census data to the Wow Classic Pop and how to install the CensusPlusTBC addon.';
+  const title = 'How to contribute to the Wow Classic Pop census project';
 
   return (
     <div className="App">
@@ -156,8 +156,8 @@ const Contribute = () => {
           <DialogContentText id="alert-dialog-description">
             Your are using an outdated version of the CensusPlusClassic addon. Please upgrade to the
             latest{' '}
-            <a href="https://github.com/christophrus/CensusPlusClassic/releases" target="blank">
-              CensusPlusClassic v{addonVersion}
+            <a href="https://www.curseforge.com/wow/addons/censusplustbc" target="blank">
+              CensusPlusTBC v{addonVersion}
             </a>{' '}
             and try again.
           </DialogContentText>
@@ -173,9 +173,9 @@ const Contribute = () => {
         <h2>How to collect census data</h2>
         <ol>
           <li>
-            Download the CensusPlusClassic addon from{' '}
+            Download the CensusPlusTBC addon from{' '}
             <a
-              href="https://github.com/christophrus/CensusPlusClassic/releases"
+              href="https://www.curseforge.com/wow/addons/censusplustbc"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -183,7 +183,7 @@ const Contribute = () => {
             </a>{' '}
             or{' '}
             <a
-              href="https://wow.curseforge.com/projects/censusplusclassic/files"
+              href="https://www.curseforge.com/wow/addons/censusplustbc"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -195,7 +195,7 @@ const Contribute = () => {
             <a href="https://www.7-zip.org/" target="_blank" rel="noopener noreferrer">
               7zip
             </a>{' '}
-            and extract the CensusPlusClassic folder to your addons directory
+            and extract the CensusPlusTBC folder to your addons directory
           </li>
           <li>
             The addon directory is usually located here:
@@ -203,7 +203,7 @@ const Contribute = () => {
             <strong>C:\Program Files\World of Warcraft\_classic_\Interface\AddOns</strong>
           </li>
           <li>
-            When you log into the game the CensusPlusClassic addon automatically starts collecting
+            When you log into the game the CensusPlusTBC addon automatically starts collecting
             data. You can watch the progress through the minimap icon.
           </li>
           <li>
@@ -215,10 +215,10 @@ const Contribute = () => {
             <strong>
               C:\Program Files\World of Warcraft\_classic_\WTF\Account\YOUR_ACCOUNT\SavedVariables\
             </strong>{' '}
-            and find the <strong>CensusPlusClassic.lua</strong>
+            and find the <strong>CensusPlusTBC.lua</strong>
           </li>
           <li>
-            Upload the <strong>CensusPlusClassic.lua</strong> through the upload button below
+            Upload the <strong>CensusPlusTBC.lua</strong> through the upload button below
           </li>
         </ol>
       </div>
@@ -228,7 +228,7 @@ const Contribute = () => {
         {UploadFinishedPanel}
       </div>
       <div className="discord-cta">
-        <a href="https://discord.gg/MYPWGkv" target="_blank" rel="noopener noreferrer">
+        <a href="https://discord.gg/DjcXKtKr88" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon size="7x" icon={faDiscord} />
           <p>
             Join the <br /> project <br /> discord

@@ -68,7 +68,7 @@ class Overview extends Component {
     }
 
     const description = 'Shows how frequent realms got updates and when the last update was';
-    const title = 'Realm update status - Wow Classic population census project';
+    const title = 'Realm update status - Wow Classic Pop census project';
 
     let activity = <h3>All time</h3>;
     if (query && query.lastDays) {
