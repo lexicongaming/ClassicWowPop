@@ -13,7 +13,7 @@ module.exports = {
   Gnome: 'Gnome',
   Human: 'Human',
   'Night Elf': 'Night Elf',
-  Draenai: 'Draenei',
+  Draenei: 'Draenei',
   'Blood Elf': 'Blood Elf',
 
   Orc: 'Orc',
