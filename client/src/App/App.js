@@ -39,6 +39,8 @@ class App extends Component {
               Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc.
               in the U.S. and/or other countries.
             </p>
+            <p>
+            WowClassicPop.com is a rebuild system from <a href="https://github.com/christophrus/wowclassicpopulation.com">Christophrus</a>
           </footer>
         </main>
       </div>
