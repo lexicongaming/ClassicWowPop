@@ -29,8 +29,8 @@ At the moment, it simply to provide an area for Wow players, guild master/recrui
         <p>
           It is highly appriciated that you install
           the{' '}
-          <a href="https://discord.gg/DjcXKtKr88">CensusPlusTBC Addon</a>{' '}
-          and <Link to="./contribute">upload your collected data</Link> to the website. Besides if
+          <a href="https://www.curseforge.com/wow/addons/censusplustbc">CensusPlusTBC Addon</a>{' '}
+          and <Link to="./contribute">upload your collected data</Link> to the website. We also have the Auto Upload Program as well <a href="https://github.com/scarecr0w12/TBCPopUploader/releases/tag/Release">Found Here</a>. Besides if
           you find any bugs or have some suggestions, feel free to join the project{' '}
           <a href="https://discord.gg/DjcXKtKr88">Discord</a> and post them there.
         </p>
