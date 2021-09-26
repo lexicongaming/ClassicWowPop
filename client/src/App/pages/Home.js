@@ -42,14 +42,15 @@ const Home = () => {
     );
   }
 
-  const description =
-    'A project with the goal to take a full census of active players on all World of Warcraft: TBC Classic realms';
-  const title = '>Wow Classic Pop - A census project';
+  const description = 'A project with the goal to take a full census of active players on all World of Warcraft: TBC Classic realms';
+  const title = 'Wow Classic Pop - A census project';
+  const keywords = 'World of warcraft population, Wow population, warcraft census, wow census, censusplustbc, censusplusclassic,wowclassicpopulation.com';
 
   return (
     <div className="App">
       <Helmet>
         <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
         <meta name="twitter:description" content={description} />
         <meta property="og:description" content={description} />
         <meta property="og:title" content={title} />

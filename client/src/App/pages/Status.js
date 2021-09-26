@@ -69,6 +69,7 @@ class Overview extends Component {
 
     const description = 'Shows how frequent realms got updates and when the last update was';
     const title = 'Realm update status - Wow Classic Pop census project';
+    const keywords = 'World of warcraft population, Wow population, warcraft census, wow census, censusplustbc, censusplusclassic,wowclassicpopulation.com';
 
     let activity = <h3>All time</h3>;
     if (query && query.lastDays) {
@@ -78,11 +79,12 @@ class Overview extends Component {
     return (
       <div className="App">
         <Helmet>
-          <meta name="description" content={description} />
-          <meta name="twitter:description" content={description} />
-          <meta property="og:description" content={description} />
-          <meta property="og:title" content={title} />
-          <meta name="twitter:title" content={title} />
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="twitter:description" content={description} />
+        <meta property="og:description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta name="twitter:title" content={title} />
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
           <title>{title}</title>
         </Helmet>

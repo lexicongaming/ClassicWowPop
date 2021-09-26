@@ -80,15 +80,17 @@ class Overview extends Component {
     const description =
       'Gives an overview about the faction balance through all WoW TBC Realms';
     const title = 'Realm faction balance overview - Wow Classic Pop census project';
+    const keywords = 'World of warcraft population, Wow population, warcraft census, wow census, censusplustbc, censusplusclassic,wowclassicpopulation.com';
 
     return (
       <div className="App">
         <Helmet>
-          <meta name="description" content={description} />
-          <meta name="twitter:description" content={description} />
-          <meta property="og:description" content={description} />
-          <meta property="og:title" content={title} />
-          <meta name="twitter:title" content={title} />
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="twitter:description" content={description} />
+        <meta property="og:description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta name="twitter:title" content={title} />
           <title>{title}</title>
         </Helmet>
         <h1>Overview of faction balance</h1>

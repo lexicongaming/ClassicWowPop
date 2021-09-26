@@ -122,6 +122,7 @@ const Contribute = () => {
         <p>Characters processed: {uploadResult.charStats.processed}</p>
         <p>Characters inserted: {uploadResult.charStats.inserted}</p>
         <p>Characters updated: {uploadResult.charStats.updated}</p>
+        <p>Guilds Updated: {uploadResult.chatStats.guilds}</p>
         <p>Activity datasets inserted: {uploadResult.timeStats.inserted}</p>
       </div>
     );
@@ -134,15 +135,17 @@ const Contribute = () => {
   const description =
     'How to upload census data to the Wow Classic Pop and how to install the CensusPlusTBC addon.';
   const title = 'How to contribute to the Wow Classic Pop census project';
+  const keywords = 'World of warcraft population, Wow population, warcraft census, wow census, censusplustbc, censusplusclassic,wowclassicpopulation.com';
 
   return (
     <div className="App">
       <Helmet>
-        <meta name="description" content={description} />
-        <meta name="twitter:description" content={description} />
-        <meta property="og:description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta name="twitter:title" content={title} />
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="twitter:description" content={description} />
+      <meta property="og:description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta name="twitter:title" content={title} />
         <title>{title}</title>
       </Helmet>
       <Dialog
