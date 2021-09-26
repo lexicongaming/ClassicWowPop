@@ -34,6 +34,10 @@ At the moment, it simply to provide an area for Wow players, guild master/recrui
           you find any bugs or have some suggestions, feel free to join the project{' '}
           <a href="https://discord.gg/DjcXKtKr88">Discord</a> and post them there.
         </p>
+        <h2>How can i help build the project?</h2>
+        <p>
+          Super easy! You can find the github for this site <a href="https://github.com/scarecr0w12/ClassicWowPop">Right Here</a>. I myself (The person hosting this project) do not have much Java/Node experiance, so any help would be fantastic. I'm only learning as i go.
+        </p>
         <h2>How can I contact you?</h2>
         <p>
           The best way to contact me is <a href="https://twitter.com/scarecr0w12">Twitter</a> or in
