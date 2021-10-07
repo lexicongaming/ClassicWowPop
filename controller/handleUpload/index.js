@@ -6,8 +6,8 @@ const cachegoose = require('cachegoose');
 const process = require('./process');
 
 module.exports = (uploadPath, cb) => {
-  const currentAddonVersion = '0.8.6';
-  const validVersions = [currentAddonVersion, '0.8.4', '0.8.5', '0.8.3'];
+  const currentAddonVersion = '0.8.7';
+  const validVersions = [currentAddonVersion, '0.8.4', '0.8.5', '0.8.3', '0.8.6'];
   let data;
 
   // read uploaded file
