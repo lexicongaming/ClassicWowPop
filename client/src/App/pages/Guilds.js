@@ -5,7 +5,7 @@ import queryString from 'query-string';
 import { withRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import MaterialTable from 'material-table';
-import StatusFilterForm from './components/StatusFilterForm';
+import GuildFilterForm from './components/GuildFilterForm';
 import Spinner from './components/Spinner';
 import './Status.css';
 
@@ -14,7 +14,7 @@ class Overview extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      statusStats: null,
+      guildStats: null,
       loading: false,
       query: {}
     };
@@ -25,7 +25,7 @@ class Overview extends Component {
     const { location } = this.props;
     const query = queryString.parse(location.search);
     this.setState({ query });
-    this.getStatusStats(query);
+    this.getGuildStats(query);
   }
 
   componentWillUnmount() {
@@ -33,18 +33,18 @@ class Overview extends Component {
   }
 
   // Retrieves the list of items from the Express app
-  getStatusStats = (query, cb) => {
+  getGuildStats = (query, cb) => {
     this.setState({ loading: true });
     const qs = queryString.stringify(query);
     window
-      .fetch(`/api/stats/status?${qs}`)
+      .fetch(`/api/stats/character?${qs}`)
       .then(res => res.json())
-      .then(statusStats => {
+      .then(guildStats => {
         this.setState({
-          statusStats,
+          guildStats,
           loading: false
         });
-        if (cb) cb(statusStats);
+        if (cb) cb(guildStats);
       });
   };
 
@@ -56,11 +56,11 @@ class Overview extends Component {
       search: qs
     });
     this.setState({ query });
-    this.getStatusStats(query);
+    this.getGuildStats(query);
   };
 
   render() {
-    const { statusStats, query, loading } = this.state;
+    const { guildStats, query, loading } = this.state;
 
     function LoadingPanel(props) {
       if (props.loading) return <Spinner width={300} height={300} color="#fff" />;
@@ -87,9 +87,9 @@ class Overview extends Component {
           <title>{title}</title>
         </Helmet>
         <h1>Realm update status</h1>
-        <StatusFilterForm onChange={this.handleFilterChange} />
+        <GuildFilterForm onChange={this.handleFilterChange} />
         <LoadingPanel loading={loading} />
-        {statusStats === null || loading ? (
+        {guildStats === null || loading ? (
           <div />
         ) : (
           <div style={{ marginTop: '15px' }}>
@@ -102,7 +102,7 @@ class Overview extends Component {
                 { title: 'Census amount', field: 'count', type: 'numeric' },
                 { title: 'Last census', field: 'last', type: 'datetime' }
               ]}
-              data={statusStats}
+              data={guildStats}
               style={{
                 marginTop: '10px',
                 borderRadius: '15px',

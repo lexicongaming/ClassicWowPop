@@ -7,12 +7,14 @@ import Characters from './pages/Characters';
 import Activity from './pages/Activity';
 import Contribute from './pages/Contribute';
 import About from './pages/About';
+import Guilds from './pages/Guilds';
 import Overview from './pages/Overview';
 import Status from './pages/Status';
 import Header from './components/Header';
 
 class App extends Component {
   render() {
+    // eslint-disable-next-line no-shadow
     const App = () => (
       <div className="main-container">
         <Header />
@@ -22,6 +24,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/overview" component={Overview} />
             <Route path="/characters" component={Characters} />
+            <Route path="/guilds" component={Guilds} />
             <Route path="/activity" component={Activity} />
             <Route path="/contribute" component={Contribute} />
             <Route path="/status" component={Status} />
@@ -34,13 +37,15 @@ class App extends Component {
               </li>
             </ul>
             <p>
-              WowClassicPop uses names and images from World of Warcraft, and data
-              proprietary to Blizzard Entertainment, Inc. World of Warcraft, Warcraft and Blizzard
-              Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc.
-              in the U.S. and/or other countries.
+              WowClassicPop uses names and images from World of Warcraft, and data proprietary to
+              Blizzard Entertainment, Inc. World of Warcraft, Warcraft and Blizzard are trademarks
+              or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other
+              countries.
             </p>
             <p>
-            WowClassicPop.com is a system rebuilt using the original script created by <a href="https://github.com/christophrus/">Christophrus</a>. The Current site is developed by <a href="https://github.com/scarecr0w12">Scarecr0w12</a>
+              WowClassicPop.com is a system rebuilt using the original script created by{' '}
+              <a href="https://github.com/christophrus/">Christophrus</a>. The Current site is
+              developed by <a href="https://github.com/scarecr0w12">Scarecr0w12</a>
             </p>
           </footer>
         </main>

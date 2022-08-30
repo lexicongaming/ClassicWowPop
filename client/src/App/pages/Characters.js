@@ -80,17 +80,18 @@ class Characters extends Component {
       'Character statistics give an overview about the the class, race and level distribution accross all Wow TBC Classic realms';
     const title =
       'Character statistics - Class / Race / Level distribution - Wow Classic Pop census project';
-    const keywords = 'World of warcraft population, Wow population, warcraft census, wow census, censusplustbc, censusplusclassic,wowclassicpopulation.com';
+    const keywords =
+      'World of warcraft population, Wow population, warcraft census, wow census, censusplustbc, censusplusclassic,wowclassicpop.com';
 
     return (
       <div className="App">
         <Helmet>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="twitter:description" content={description} />
-        <meta property="og:description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta name="twitter:title" content={title} />
+          <meta name="description" content={description} />
+          <meta name="keywords" content={keywords} />
+          <meta name="twitter:description" content={description} />
+          <meta property="og:description" content={description} />
+          <meta property="og:title" content={title} />
+          <meta name="twitter:title" content={title} />
           <title>{title}</title>
         </Helmet>
         <h1>Characters</h1>
@@ -108,12 +109,12 @@ class Characters extends Component {
           </div>
         )}
         <p className="intro" style={{ marginTop: '10px' }}>
-          The character charts can give you a good idea about the Wow TBC Classic Population especially
-          regarding to the balance of factions on a realm as well as about race, class and level
-          distribution. Currently there is census data from the most Wow TBC Classic realms but this
-          project aims to provide data from all the realms as well. Keep in mind that the data is
-          only as good, as of how many people are uploading their data. You can use the filter
-          options to get an even deeper insight if you wanna take a look into something more
+          The character charts can give you a good idea about the Wow TBC Classic Population
+          especially regarding to the balance of factions on a realm as well as about race, class
+          and level distribution. Currently there is census data from the most Wow TBC Classic
+          realms but this project aims to provide data from all the realms as well. Keep in mind
+          that the data is only as good, as of how many people are uploading their data. You can use
+          the filter options to get an even deeper insight if you wanna take a look into something
           special.
         </p>
       </div>

@@ -73,6 +73,15 @@ router.get('/stats/status', (req, res, next) => {
   });
 });
 
+router.get('/stats/guilds', (req, res, next) => {
+  controller.getGuildStats(req, (err, data) => {
+    if (err) {
+      return next(err);
+    }
+    return res.json(data);
+  });
+});
+
 // eslint-disable-next-line no-unused-vars
 router.get('/test', (req, res, next) => res.json({ test: 'test' }));
 // router.get('/stats/times', (req, res, next) => {});
