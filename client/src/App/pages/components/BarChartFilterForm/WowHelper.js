@@ -12,6 +12,7 @@ const TROLL = { label: 'Troll', value: 'troll' };
 const BLOODELF = { label: 'Blood Elf', value: 'blood_elf' };
 const DRAENEI = { label: 'Draenei', value: 'draenei' };
 
+
 const WARRIOR = { label: 'Warrior', value: 'warrior' };
 const PALADIN = { label: 'Paladin', value: 'paladin' };
 const ROGUE = { label: 'Rogue', value: 'rogue' };
@@ -21,6 +22,7 @@ const PRIEST = { label: 'Priest', value: 'priest' };
 const SHAMAN = { label: 'Shaman', value: 'shaman' };
 const DRUID = { label: 'Druid', value: 'druid' };
 const WARLOCK = { label: 'Warlock', value: 'warlock' };
+const DEATHKNIGHT = { label: 'Death Knight', value: 'deathknight' };
 
 export const getFactions = () => {
   return [ALLIANCE, HORDE];
@@ -41,28 +43,28 @@ export const getRacesByFaction = faction => {
 export const getRaces = () => getRacesByFaction('');
 
 export const getClassesByRace = race => {
-  if (race === '') return [WARRIOR, PALADIN, SHAMAN, ROGUE, HUNTER, MAGE, PRIEST, DRUID, WARLOCK];
+  if (race === '') return [WARRIOR, PALADIN, SHAMAN, ROGUE, HUNTER, MAGE, PRIEST, DRUID, WARLOCK, DEATHKNIGHT];
   switch (race.value) {
     case HUMAN.value:
-      return [WARRIOR, PALADIN, ROGUE, PRIEST, MAGE, WARLOCK];
+      return [WARRIOR, PALADIN, ROGUE, PRIEST, MAGE, WARLOCK, DEATHKNIGHT];
     case DWARF.value:
-      return [WARRIOR, PALADIN, HUNTER, ROGUE, PRIEST];
+      return [WARRIOR, PALADIN, HUNTER, ROGUE, PRIEST, DEATHKNIGHT];
     case GNOME.value:
-      return [WARRIOR, ROGUE, MAGE, WARLOCK];
+      return [WARRIOR, ROGUE, MAGE, WARLOCK, DEATHKNIGHT];
     case NIGHTELF.value:
-      return [WARRIOR, HUNTER, ROGUE, PRIEST, DRUID];
+      return [WARRIOR, HUNTER, ROGUE, PRIEST, DRUID, DEATHKNIGHT];
     case DRAENEI.value:
-      return [WARRIOR, HUNTER, PRIEST, PALADIN, SHAMAN, MAGE];
+      return [WARRIOR, HUNTER, PRIEST, PALADIN, SHAMAN, MAGE, DEATHKNIGHT];
     case UNDEAD.value:
-      return [WARRIOR, ROGUE, PRIEST, MAGE, WARLOCK];
+      return [WARRIOR, ROGUE, PRIEST, MAGE, WARLOCK, DEATHKNIGHT];
     case ORC.value:
-      return [WARRIOR, HUNTER, ROGUE, SHAMAN, WARLOCK];
+      return [WARRIOR, HUNTER, ROGUE, SHAMAN, WARLOCK, DEATHKNIGHT];
     case TAUREN.value:
-      return [WARRIOR, HUNTER, SHAMAN, DRUID];
+      return [WARRIOR, HUNTER, SHAMAN, DRUID, DEATHKNIGHT];
     case TROLL.value:
-      return [WARRIOR, HUNTER, ROGUE, PRIEST, SHAMAN, MAGE];
+      return [WARRIOR, HUNTER, ROGUE, PRIEST, SHAMAN, MAGE, DEATHKNIGHT];
     case BLOODELF.value:
-      return [HUNTER, MAGE, PALADIN, PRIEST, ROGUE, WARLOCK];
+      return [HUNTER, MAGE, PALADIN, PRIEST, ROGUE, WARLOCK, DEATHKNIGHT];
     default:
       return undefined;
   }
@@ -70,10 +72,10 @@ export const getClassesByRace = race => {
 
 export const getClassesByFaction = faction => {
   if (faction === '')
-    return [WARRIOR, PALADIN, SHAMAN, ROGUE, HUNTER, MAGE, PRIEST, DRUID, WARLOCK];
+    return [WARRIOR, PALADIN, SHAMAN, ROGUE, HUNTER, MAGE, PRIEST, DRUID, WARLOCK, DEATHKNIGHT];
   return faction.value === ALLIANCE.value
-    ? [WARRIOR, PALADIN, ROGUE, HUNTER, MAGE, PRIEST, DRUID, WARLOCK, SHAMAN]
-    : [WARRIOR, SHAMAN, ROGUE, HUNTER, MAGE, PRIEST, DRUID, WARLOCK, PALADIN];
+    ? [WARRIOR, PALADIN, ROGUE, HUNTER, MAGE, PRIEST, DRUID, WARLOCK, SHAMAN, DEATHKNIGHT]
+    : [WARRIOR, SHAMAN, ROGUE, HUNTER, MAGE, PRIEST, DRUID, WARLOCK, PALADIN, DEATHKNIGHT];
 };
 
 export const getClasses = () => getClassesByRace('');

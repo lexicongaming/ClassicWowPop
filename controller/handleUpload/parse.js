@@ -92,9 +92,9 @@ const timesData = censusDb => {
         }
 
         // eslint-disable-next-line prettier/prettier
-        const [druid, hunter, mage, priest, rogue, warlock, warrior, shaman, paladin] = times.split('&');
+        const [druid, hunter, mage, priest, rogue, warlock, warrior, shaman, paladin, deathknight] = times.split('&');
         // eslint-disable-next-line prettier/prettier
-        const onlineByClass = { druid, hunter, mage, priest, rogue, warlock, warrior, shaman, paladin };
+        const onlineByClass = { druid, hunter, mage, priest, rogue, warlock, warrior, shaman, paladin, deathknight };
         const onlineTotal = times.split('&').reduce((acc, current) => acc + Number(current), 0);
         const date = new Date(`${time.replace('&', ' ')} UTC`);
         flatTimesArray.push({ date, realm, faction, onlineByClass, onlineTotal });

@@ -10,11 +10,14 @@ module.exports = {
   Воин: enUS.Warrior,
   Шаман: enUS.Shaman,
   Паладин: enUS.Paladin,
+  'Рыцарь смерти': enUS["Death Knight"],
 
   Дворф: enUS.Dwarf,
   Гном: enUS.Gnome,
   Человек: enUS.Human,
-  'Ночной эльф': enUS['Night Elf'],
+  'Ночной эльф': enUS["Night Elf"],
+  'Дреней': enUS.Draenei,
+  'Блэк Эльф': enUS['Blood Elf'],
 
   Орк: enUS.Orc,
   Таурен: enUS.Tauren,

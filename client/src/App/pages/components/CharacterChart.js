@@ -37,7 +37,7 @@ const CharacterChart = props => {
       data={characterStats}
       selector="classes"
       barWidth="30"
-      chartHeight="150"
+      chartHeight="180"
       iconSize="30"
     />
   );
@@ -51,7 +51,7 @@ const CharacterChart = props => {
       scale="pow"
       gap="1"
       showXAxis
-      maxWidth="340"
+      maxWidth="380"
       chartHeight="150"
     />
   );
@@ -112,7 +112,7 @@ const CharacterChart = props => {
           <p>No data found for this selection</p>
           <h2 className="highlight">Your help is wanted!</h2>
           <p>
-            If you&apos;re playing World of Warcraft: TBC Classic {realmAndFaction} you could start
+            If you&apos;re playing World of Warcraft: Wotlk Classic {realmAndFaction} you could start
             collecting data and upload it to our database
           </p>
           <p>

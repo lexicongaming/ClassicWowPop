@@ -64,7 +64,7 @@ const useStyles = makeStyles(theme => ({
 export default function StackedBarChartFilterForm({ onChange }) {
   const classes = useStyles();
 
-  const [selectedLevel, setSelectedLevel] = React.useState([1, 60]);
+  const [selectedLevel, setSelectedLevel] = React.useState([1, 80]);
   const [selectedLastSeen, setSelectedLastSeen] = React.useState('');
 
   function handleLevelChange(event, newValue) {
@@ -76,7 +76,7 @@ export default function StackedBarChartFilterForm({ onChange }) {
   }
 
   function resetForm() {
-    setSelectedLevel([1, 70]);
+    setSelectedLevel([1, 80]);
     setSelectedLastSeen('');
     onChange({});
   }
@@ -87,7 +87,7 @@ export default function StackedBarChartFilterForm({ onChange }) {
     if (minLevel !== 1) {
       query.minLevel = minLevel;
     }
-    if (maxLevel !== 70) {
+    if (maxLevel !== 80) {
       query.maxLevel = maxLevel;
     }
     if (selectedLastSeen !== '') {

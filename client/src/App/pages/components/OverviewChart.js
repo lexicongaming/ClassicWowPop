@@ -14,7 +14,7 @@ const OverviewChart = props => {
   }
 
   let minLevel = 1;
-  let maxLevel = 70;
+  let maxLevel = 80;
 
   if (Object.prototype.hasOwnProperty.call(query, 'minLevel')) {
     minLevel = query.minLevel;

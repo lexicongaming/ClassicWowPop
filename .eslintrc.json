@@ -5,4 +5,9 @@
     "prettier/prettier": ["error"],
     "no-prototype-builtins": "off"
   }
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  }
 }

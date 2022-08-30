@@ -10,11 +10,14 @@ module.exports = {
   Guerreiro: enUS.Warrior,
   Xamã: enUS.Shaman,
   Paladino: enUS.Paladin,
+  'Cavaleiro da Morte': enUS["Death Knight"],
 
   Anão: enUS.Dwarf,
   Gnomo: enUS.Gnome,
   Humano: enUS.Human,
   'Elfo Noturno': enUS['Night Elf'],
+  'Elfo de Gelo': enUS.Draenei,
+  'Elfo de Sangue': enUS['Blood Elf'],
 
   Orc: enUS.Orc,
   Tauren: enUS.Tauren,

@@ -8,6 +8,7 @@ module.exports = {
   Warrior: 'Warrior',
   Shaman: 'Shaman',
   Paladin: 'Paladin',
+  'Death Knight': 'Death Knight',
 
   Dwarf: 'Dwarf',
   Gnome: 'Gnome',

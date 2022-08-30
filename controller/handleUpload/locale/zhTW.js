@@ -10,11 +10,14 @@ module.exports = {
   戰士: enUS.Warrior,
   薩滿: enUS.Shaman,
   聖騎士: enUS.Paladin,
+  '死亡騎士': enUS.DeathKnight,
 
   矮人: enUS.Dwarf,
   地精: enUS.Gnome,
   人類: enUS.Human,
-  夜精靈: enUS['Night Elf'],
+  夜精靈: enUS.NightElf,
+  精靈: enUS.Draenei,
+  '血精靈': enUS.BloodElf,
 
   獸人: enUS.Orc,
   牛頭人: enUS.Tauren,

@@ -1,6 +1,6 @@
 {
   "name": "wow-classic-pop",
-  "version": "1.0.0",
+  "version": "1.3.2",
   "description": "A World of warcraft: TBC Classic Census system to help players see populations on servers.",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
     "jszip": "^3.2.2",
     "lua-to-json": "github:christophrus/lua-to-json",
     "moment": "^2.24.0",
-    "mongoose": "^5.7.3"
+    "mongoose": "^5.13.15"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

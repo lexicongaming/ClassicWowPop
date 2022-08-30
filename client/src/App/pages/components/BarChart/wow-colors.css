@@ -66,6 +66,14 @@
   color: hsl(31, 44%, 61%);
 }
 
-.bar.classes_warrior{
-  color: hsl(31, 44%, 51%);
+.bar.classes_warrior:hover{
+  color: hsl(31, 46%, 59%);
+}
+
+.bar.classes_death_knight{
+  color: hsl(356, 100%, 50%);
+}
+
+.bar.classes_death_knight:hover{
+  color: hsl(356, 60%, 57%);
 }

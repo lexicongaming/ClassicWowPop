@@ -1,4 +1,4 @@
-const getIndex = (currentIndex, changer, maxLength) => {
+function getIndex(currentIndex, changer, maxLength) {
   let ret = 0;
 
   if (changer < 0) {
@@ -10,7 +10,7 @@ const getIndex = (currentIndex, changer, maxLength) => {
   }
 
   return ret;
-};
+}
 
 const buildStack = (arr, currentIndex) => {
   return [

@@ -6,7 +6,7 @@ const ActivityChart = props => {
   const { activityStats, query, width, height } = props;
 
   let chartHeight = 550;
-  let chartWidth = 600;
+  let chartWidth = 700;
 
   const chartMargin = { top: 50, right: 50, bottom: 50, left: 50 };
 
