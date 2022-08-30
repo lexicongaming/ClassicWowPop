@@ -93,3 +93,4 @@ typings/
 # Unneeded
 .github/
 .vscode/
+package-lock.json
