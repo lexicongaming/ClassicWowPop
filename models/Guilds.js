@@ -8,7 +8,7 @@ const guildSchema = new Schema({
   faction: { type: String, required: true, index: true },
   class: { type: String, required: true, index: true },
   race: { type: String, required: true, index: true },
-  guild: { type: String, index: true },
+  guild: { type: String, index: true, index: true },
   level: { type: Number, required: true, index: true },
   sex: { type: Number, index: true },
   lastSeen: { type: Date, required: true }

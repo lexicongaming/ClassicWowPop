@@ -21,9 +21,6 @@ const Header = props => {
         <Link className={pathname === '/characters' ? 'active' : ''} to="./characters">
           Details
         </Link>
-        <Link className={pathname === '/guilds' ? 'deactive' : ''} to="./guilds">
-          Guilds
-        </Link>
         <Link className={pathname === '/activity' ? 'active' : ''} to="./activity">
           Activity
         </Link>
