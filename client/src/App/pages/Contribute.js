@@ -84,7 +84,7 @@ const Contribute = () => {
       <div>
         {ErrorPanel}
         <h2>Upload data</h2>
-        <p>Select your CensusPlusTBC.lua (instruction see above)</p>
+        <p>Select your CensusPlusWotlk.lua (instruction see above)</p>
         <input
           accept=".lua"
           className={classes.input}
@@ -132,9 +132,9 @@ const Contribute = () => {
   };
 
   const description =
-    'How to upload census data to the Wow Classic Pop and how to install the CensusPlusTBC addon.';
+    'How to upload census data to the Wow Classic Pop and how to install the CensusPlusWotlk addon.';
   const title = 'How to contribute to the Wow Classic Pop census project';
-  const keywords = 'World of warcraft population, Wow population, warcraft census, wow census, censusplustbc, censusplusclassic,wowclassicpopulation.com';
+  const keywords = 'World of warcraft population, Wow population, warcraft census, wow census, censusplusWotlk, censusplusclassic,wowclassicpopulation.com';
 
   return (
     <div className="App">
@@ -158,8 +158,8 @@ const Contribute = () => {
           <DialogContentText id="alert-dialog-description">
             Your are using an outdated version of the CensusPlusClassic addon. Please upgrade to the
             latest{' '}
-            <a href="https://www.curseforge.com/wow/addons/censusplustbc" target="blank">
-              CensusPlusTBC v{addonVersion}
+            <a href="https://www.curseforge.com/wow/addons/censusplusWotlk" target="blank">
+              CensusPlusWotlk v{addonVersion}
             </a>{' '}
             and try again.
           </DialogContentText>
@@ -175,9 +175,9 @@ const Contribute = () => {
         <h2>How to collect census data</h2>
         <ol>
           <li>
-            Download the CensusPlusTBC addon from{' '}
+            Download the CensusPlusWotlk addon from{' '}
             <a
-              href="https://www.curseforge.com/wow/addons/censusplustbc"
+              href="https://www.curseforge.com/wow/addons/censusplusWotlk"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -185,7 +185,7 @@ const Contribute = () => {
             </a>{' '}
             or{' '}
             <a
-              href="https://www.curseforge.com/wow/addons/censusplustbc"
+              href="https://www.curseforge.com/wow/addons/censusplusWotlk"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -197,7 +197,7 @@ const Contribute = () => {
             <a href="https://www.7-zip.org/" target="_blank" rel="noopener noreferrer">
               7zip
             </a>{' '}
-            and extract the CensusPlusTBC folder to your addons directory
+            and extract the CensusPlusWotlk folder to your addons directory
           </li>
           <li>
             The addon directory is usually located here:
@@ -205,7 +205,7 @@ const Contribute = () => {
             <strong>C:\Program Files\World of Warcraft\_classic_\Interface\AddOns</strong>
           </li>
           <li>
-            When you log into the game the CensusPlusTBC addon automatically starts collecting
+            When you log into the game the CensusPlusWotlk addon automatically starts collecting
             data. You can watch the progress through the minimap icon.
           </li>
           <li>
@@ -217,10 +217,10 @@ const Contribute = () => {
             <strong>
               C:\Program Files\World of Warcraft\_classic_\WTF\Account\YOUR_ACCOUNT\SavedVariables\
             </strong>{' '}
-            and find the <strong>CensusPlusTBC.lua</strong>
+            and find the <strong>CensusPlusWotlk.lua</strong>
           </li>
           <li>
-            Upload the <strong>CensusPlusTBC.lua</strong> through the upload button below
+            Upload the <strong>CensusPlusWotlk.lua</strong> through the upload button below
           </li>
         </ol>
       </div>

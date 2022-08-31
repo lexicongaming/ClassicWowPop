@@ -42,9 +42,9 @@ const Home = () => {
     );
   }
 
-  const description = 'A project with the goal to take a full census of active players on all World of Warcraft: TBC Classic realms';
+  const description = 'A project with the goal to take a full census of active players on all World of Warcraft: Wotlk Classic realms';
   const title = 'Wow Classic Pop - A census project';
-  const keywords = 'World of warcraft population, Wow population, warcraft census, wow census, censusplustbc, censusplusclassic,wowclassicpopulation.com';
+  const keywords = 'World of warcraft population, Wow population, warcraft census, wow census, censusplusWotlk, censusplusclassic,wowclassicpopulation.com';
 
   return (
     <div className="App">
@@ -59,7 +59,7 @@ const Home = () => {
       </Helmet>
       <h1>Wow Classic Pop - A census project</h1>
       <p className="intro">
-        We are collecting census data from the World of Warcraft: TBC Classic realms with the help of an
+        We are collecting census data from the World of Warcraft: Wotlk Classic realms with the help of an
         ingame addon and visualizes it in some fancy, filterable charts.
       </p>
       <div className="box-wrapper normal">
@@ -69,11 +69,11 @@ const Home = () => {
           This project is highly dependant on community participation, because the statistics are
           only as good as of how many people have the{' '}
           <a
-            href="https://www.curseforge.com/wow/addons/censusplustbc"
+            href="https://www.curseforge.com/wow/addons/censusplusWotlk"
             target="_blank"
             rel="noopener noreferrer"
           >
-            CensusPlusTBC addon
+            CensusPlusWotlk addon
           </a>{' '}
           installed and submit their collected data to the website. If you wanna participate in
           improving the significance of the samples, just start collecting data while you&apos;re

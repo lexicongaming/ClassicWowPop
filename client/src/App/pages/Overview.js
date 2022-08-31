@@ -78,9 +78,9 @@ class Overview extends Component {
     }
 
     const description =
-      'Gives an overview about the faction balance through all WoW TBC Realms';
+      'Gives an overview about the faction balance through all WoW Wotlk Realms';
     const title = 'Realm faction balance overview - Wow Classic Pop census project';
-    const keywords = 'World of warcraft population, Wow population, warcraft census, wow census, censusplustbc, censusplusclassic,wowclassicpopulation.com';
+    const keywords = 'World of warcraft population, Wow population, warcraft census, wow census, censusplusWotlk, censusplusclassic,wowclassicpopulation.com';
 
     return (
       <div className="App">

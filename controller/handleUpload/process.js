@@ -1,6 +1,6 @@
 const Character = require('../../models/Character');
 const Guild = require('../../models/Guilds');
-const Time = require('../../models/Time');
+const Time = require('../../models/Time').default;
 const Realm = require('../../models/Realm');
 const parse = require('./parse');
 
@@ -22,7 +22,7 @@ const censusData = async (censusDb, cb) => {
     parsedTimes = parse.timesData(censusDb);
     parsedCharacters = parse.charactersData(censusDb);
   } catch (error) {
-    cb({ status: 400, message: 'Parsing error - imvaid times/character format', trace: error });
+    cb({ status: 400, message: 'Parsing error - invaid times/character format', trace: error });
   }
 
   // update db

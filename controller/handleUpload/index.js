@@ -7,7 +7,7 @@ const process = require('./process');
 
 module.exports = (uploadPath, cb) => {
   const currentAddonVersion = '0.9.0';
-  const validVersions = [currentAddonVersion];
+  const validVersions = [currentAddonVersion, '0.9.0'];
   let data;
 
   // read uploaded file
@@ -58,7 +58,7 @@ module.exports = (uploadPath, cb) => {
       },
       updateDialog: currentAddonVersion
     };
-
+    console.log(charStats);
     return cb(null, emptyStats);
   }
 

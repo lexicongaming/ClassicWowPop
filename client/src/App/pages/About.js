@@ -8,18 +8,18 @@ const About = () => {
       <div className="box-wrapper normal">
         <h2>Why?</h2>
         <p>
-          We are collecting WoW TBC Classic population information to help understand trends within the servers. Character information such as Name, Guild, Level, Class and race, help us determin when players are playing, guild growths, Server activity, and other things we haven't even thought of us. Since many Wow TBC servers change in population with such frequency, undertanding that may help us as players(maybe even the developers) know what servers to play on, or move to/from.
+          We are collecting WoW Wotlk Classic population information to help understand trends within the servers. Character information such as Name, Guild, Level, Class and race, help us determin when players are playing, guild growths, Server activity, and other things we haven't even thought of us. Since many Wow Wotlk servers change in population with such frequency, undertanding that may help us as players(maybe even the developers) know what servers to play on, or move to/from.
         </p>
         <h2>How did you get the numbers?</h2>
         <p>
-          CenusPlusTBC is an addon that automatically chains /who request in an intelligent
+          CenusPlusWotlk is an addon that automatically chains /who request in an intelligent
           way, so that it can collect as much characters as possible that are currently online on a
           realm. The addon saves all this data in a *.lua file that then can be uploaded on this
           website where it gets aggregated with the collected data of all other people.
         </p>
         <h2>Who made this website?</h2>
         <p>
-          At this time, I am the only person working on this project. However, I would LOVE for help in building this into somthing amazing! You can find our discord below, or Find me (Statichands) on the Atiesh TBC Server on alliance.
+          At this time, I am the only person working on this project. However, I would LOVE for help in building this into somthing amazing! You can find our discord below, or Find me (Statichands) on the Atiesh Wotlk Server on alliance.
         </p>
         <h2>What is the goal</h2>
         <p>
@@ -29,8 +29,8 @@ At the moment, it simply to provide an area for Wow players, guild master/recrui
         <p>
           It is highly appriciated that you install
           the{' '}
-          <a href="https://www.curseforge.com/wow/addons/censusplustbc">CensusPlusTBC Addon</a>{' '}
-          and <Link to="./contribute">upload your collected data</Link> to the website. We also have the Auto Upload Program as well <a href="https://github.com/scarecr0w12/TBCPopUploader/releases/tag/Release">Found Here</a>. Besides if
+          <a href="https://www.curseforge.com/wow/addons/censuspluswotlk">CensusPlusWotlk Addon</a>{' '}
+          and <Link to="./contribute">upload your collected data</Link> to the website. We also have the Auto Upload Program as well <a href="hhttps://github.com/scarecr0w12/WowPopUploader/releases/tag/Release">Found Here</a>. Besides if
           you find any bugs or have some suggestions, feel free to join the project{' '}
           <a href="https://discord.gg/DjcXKtKr88">Discord</a> and post them there.
         </p>

@@ -89,9 +89,9 @@ class Activity extends Component {
     }
 
     const description =
-      'Realm activity gives an overview about the active players concurrently online on Wow TBC Classic realms in chart form';
+      'Realm activity gives an overview about the active players concurrently online on Wow Wotlk Classic realms in chart form';
     const title = 'Population activity overview - Wow Classic Pop census project';
-    const keywords = 'World of warcraft population, Wow population, warcraft census, wow census, censusplustbc, censusplusclassic,wowclassicpopulation.com';
+    const keywords = 'World of warcraft population, Wow population, warcraft census, wow census, censusplusWotlk, censusplusclassic,wowclassicpopulation.com';
 
     return (
       <div className="App">
