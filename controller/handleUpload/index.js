@@ -19,7 +19,7 @@ module.exports = (uploadPath, cb) => {
 
   // write backup to fs
   const filename = +new Date();
-  const jsonPath = path.join('/storage/', `${filename}.zip`);
+f  const jsonPath = path.join('./storage/', `${filename}.zip`);
   const zip = new JSZip();
   try {
     zip.file(`${filename}.lua`, data);
