@@ -300,7 +300,7 @@ export default function BarChartFilterForm({ realmOptions, onChange }) {
             onChange={handleLevelChange}
             valueLabelDisplay="auto"
             classes={{ rail: 'fix-slider-rail' }}
-            max={70}
+            max={80}
             min={1}
           />
         </div>

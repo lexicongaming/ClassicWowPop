@@ -96,12 +96,12 @@ class Activity extends Component {
     return (
       <div className="App">
         <Helmet>
-        <meta name="description" content={description} />
+          <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <meta name="twitter:description" content={description} />
-        <meta property="og:description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={description} />
+          <meta property="og:description" content={description} />
+          <meta property="og:title" content={title} />
+          <meta name="twitter:title" content={title} />
           <title>{title}</title>
         </Helmet>
         <h1>Activity</h1>
@@ -118,9 +118,9 @@ class Activity extends Component {
           />
         )}
         <p className="intro" style={{ marginTop: '10px' }}>
-          The activity charts can give you a good idea about the active Wow TBC Classic Population and
-          how many people are playing WoW TBC Classic. Currently there is census data from the most Wow
-          TBC Classic realms but this project aims to provide data from all the realms as well. Keep in
+          The activity charts can give you a good idea about the active Wow Classic Population and
+          how many people are playing WoW Classic. Currently there is census data from the most Wow
+          Classic realms but this project aims to provide data from all the realms as well. Keep in
           mind that the data is only as good, as of how many people are uploading their data. You
           maybe need to select a specific time frame to get more meaningful results.
         </p>
