@@ -1,6 +1,5 @@
 const Character = require('../../models/Character');
-const Guild = require('../../models/Guilds');
-const Time = require('../../models/Time').default;
+const Time = require('../../models/Time');
 const Realm = require('../../models/Realm');
 const parse = require('./parse');
 

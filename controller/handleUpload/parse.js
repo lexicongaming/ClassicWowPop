@@ -2,7 +2,7 @@
 /* eslint-disable no-restricted-properties */
 // filter methods
 const { StringHash } = require('./helper');
-const locale = require('./locale').default;
+const locale = require('./locale');
 
 const byDuplicateChars = (element, index, array) => {
   const foundIndex = array.findIndex(

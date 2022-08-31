@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const cachegoose = require('cachegoose');
 const apiRouter = require('./routes/api');
 
-mongoose.connect("mongodb://wowclas_census:RbHxjmKdmW0F@localhost:27017/wowclas_census", { useNewUrlParser: true, poolSize: 20 });
+mongoose.connect("mongodb://localhost:27017/wowclas_census", { useNewUrlParser: true, poolSize: 20 });
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useUnifiedTopology', true);

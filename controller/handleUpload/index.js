@@ -58,7 +58,7 @@ module.exports = (uploadPath, cb) => {
       },
       updateDialog: currentAddonVersion
     };
-    console.log(charStats);
+
     return cb(null, emptyStats);
   }
 
