@@ -6,6 +6,22 @@ const mongoose = require('mongoose');
 const cachegoose = require('cachegoose');
 const apiRouter = require('./routes/api');
 
+const Sentry = require("@sentry/node");
+// or use es6 import statements
+// import * as Sentry from '@sentry/node';
+
+const Tracing = require("@sentry/tracing");
+// or use es6 import statements
+// import * as Tracing from '@sentry/tracing';
+Sentry.init({
+  dsn: "https://638ec02adfc643489d9a64f60817a6b0@o1387008.ingest.sentry.io/6707868",
+
+  // Set tracesSampleRate to 1.0 to capture 100%
+  // of transactions for performance monitoring.
+  // We recommend adjusting this value in production
+  tracesSampleRate: 1.0,
+});
+
 mongoose.connect("mongodb://localhost:27017/wowclas_census", { useNewUrlParser: true, poolSize: 20 });
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
@@ -41,6 +57,7 @@ app.use((err, req, res, next) => {
   const errMessage = err.message || 'Internal Server Error';
 
   res.json({ error: errMessage });
+  Sentry.captureException(err)
 });
 
 const port = process.env.PORT || 5000;

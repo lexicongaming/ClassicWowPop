@@ -35,6 +35,9 @@ class App extends Component {
               <li>
                 <Link to="./status">Status</Link>
               </li>
+              <li>
+                <a href="https://github.com/sponsors/scarecr0w12">Sponsor Us</a>
+              </li>
             </ul>
             <p>
               WowClassicPop uses names and images from World of Warcraft, and data proprietary to
