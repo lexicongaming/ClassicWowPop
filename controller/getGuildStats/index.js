@@ -1,5 +1,5 @@
 /* eslint-disable no-prototype-builtins */
-const Character = require('../../models/Guilds');
+const Character = require('../../models/Character');
 
 module.exports = (req, cb) => {
   const query = { ...req.query };
@@ -49,6 +49,11 @@ module.exports = (req, cb) => {
     {
       $facet: {
         _total: [{ $group: { _id: null, count: { $sum: 1 } } }],
+        _name: [
+          { $group: { _id: '$name', _count: { $sum: 1 } } },
+          { $project: { _id: 0, name: '$_id', count: '$_count' } },
+          { $sort: { count: -1 } }
+        ],
         _realms: [
           { $group: { _id: '$realm', _count: { $sum: 1 } } },
           { $project: { _id: 0, name: '$_id', count: '$_count' } },
@@ -84,6 +89,7 @@ module.exports = (req, cb) => {
     {
       $project: {
         total: { $arrayElemAt: ['$_total.count', 0] },
+        name: '$_name',
         realms: '$_realms',
         factions: '$_factions',
         races: '$_races',
