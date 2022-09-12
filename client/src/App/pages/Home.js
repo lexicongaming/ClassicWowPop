@@ -85,6 +85,7 @@ const Home = () => {
           If you need help setting it up take a look at the{' '}
           <Link to="./contribute">Instructions page</Link>. Some convenient options like an
           automatic data uploader are in the making also.
+          <span>Help support the site, <a href="https://github.com/sponsors/scarecr0w12">Sponsor us today!</a></span>
         </p>
       </div>
       <div className="discord-cta">
