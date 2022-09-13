@@ -16,6 +16,7 @@ const characterSchema = new Schema({
 
 characterSchema.index({ name: 1, realm: 1 }, { unique: true });
 characterSchema.index({ name: 1, realm: 1, level: 1, lastSeen: 1 });
+characterSchema.index({ name: 1, realm: 1, level: 1, guild: 1, lastSeen: 1 });
 
 const Character = mongoose.model('Character', characterSchema);
 Character.init();

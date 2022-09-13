@@ -18,7 +18,7 @@ module.exports = (req, cb) => {
     delete query.maxLevel;
   }
   if (query.hasOwnProperty('guilds')) {
-    query.guilds = { $in: query.guilds.split(',') };
+    query.guilds = { $in: query.guilds };
   }
 
   // check if realm param has multiple values
