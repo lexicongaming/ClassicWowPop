@@ -1,22 +1,25 @@
-/* eslint-disable prefer-destructuring */
-/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import queryString from 'query-string';
 import { withRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import MaterialTable from 'material-table';
-import GuildFilterForm from './components/GuildFilterForm';
+import GuildLineChartFilterForm from './components/GuildLineChartFilterForm';
+import getRealmList from './helper/getRealmList';
+import getGuildList from './helper/getGuildList';
+import GuildActivityChart from './components/GuildActivityChart';
 import Spinner from './components/Spinner';
-import './Status.css';
 
-class Overview extends Component {
+class Guilds extends Component {
   // Initialize the state
   constructor(props) {
     super(props);
     this.state = {
-      guildStats: null,
+      activityStats: null,
+      realmOptions: null,
+      guildOptions: null,
       loading: false,
-      query: {}
+      query: {},
+      width: 0,
+      height: 0
     };
   }
 
@@ -24,8 +27,22 @@ class Overview extends Component {
   componentDidMount() {
     const { location } = this.props;
     const query = queryString.parse(location.search);
-    this.setState({ query });
-    this.getGuildStats(query);
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+    if (Object.entries(query).length !== 0) {
+      this.getActivityStats(query);
+    }
+    getRealmList(realms => {
+      this.setState({
+        realmOptions: realms,
+        query
+      });
+    });
+    getGuildList(query.realm, guilds => {
+      this.setState({
+        guildOptions: guilds
+      });
+    });
   }
 
   componentWillUnmount() {
@@ -33,18 +50,18 @@ class Overview extends Component {
   }
 
   // Retrieves the list of items from the Express app
-  getGuildStats = (query, cb) => {
+  getActivityStats = (query, cb) => {
     this.setState({ loading: true });
     const qs = queryString.stringify(query);
     window
-      .fetch(`/api/stats/character?${qs}`)
+      .fetch(`/api/stats/guilds?${qs}`)
       .then(res => res.json())
-      .then(guildStats => {
+      .then(activityStats => {
         this.setState({
-          guildStats,
+          activityStats,
           loading: false
         });
-        if (cb) cb(guildStats);
+        if (cb) cb(activityStats);
       });
   };
 
@@ -56,80 +73,71 @@ class Overview extends Component {
       search: qs
     });
     this.setState({ query });
-    this.getGuildStats(query);
+    this.getActivityStats(query);
+  };
+
+  updateWindowDimensions = () => {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
   };
 
   render() {
-    const { guildStats, query, loading } = this.state;
+    const { activityStats, realmOptions, guildOptions, query, width, height, loading } = this.state;
+
+    let filterPanel;
+    if (realmOptions !== null) {
+      filterPanel = (
+        <GuildLineChartFilterForm 
+        realmOptions={realmOptions} 
+        guildOptions={guildOptions} 
+        onChange={this.handleFilterChange} 
+        />
+      );
+    }
 
     function LoadingPanel(props) {
       if (props.loading) return <Spinner width={300} height={300} color="#fff" />;
       return <div />;
     }
 
-    const description = 'Shows how frequent realms got updates and when the last update was';
-    const title = 'Realm update status - Wow Classic Pop census project';
-
-    let activity = <h3>All time</h3>;
-    if (query && query.lastDays) {
-      activity = <h3>Last {query.lastDays} days</h3>;
-    }
+    const description =
+      'Realm activity gives an overview about the active players concurrently online on Wow Wotlk Classic realms in chart form';
+    const title = 'Population activity overview - Wow Classic Pop census project';
+    const keywords = 'World of warcraft population, Wow population, warcraft census, wow census, censusplusWotlk, censusplusclassic,wowclassicpopulation.com';
 
     return (
       <div className="App">
         <Helmet>
           <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
           <meta name="twitter:description" content={description} />
           <meta property="og:description" content={description} />
           <meta property="og:title" content={title} />
           <meta name="twitter:title" content={title} />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
           <title>{title}</title>
         </Helmet>
-        <h1>Realm update status</h1>
-        <GuildFilterForm onChange={this.handleFilterChange} />
+        <h1>Activity</h1>
+        {filterPanel}
         <LoadingPanel loading={loading} />
-        {guildStats === null || loading ? (
+        {activityStats === null ? (
           <div />
         ) : (
-          <div style={{ marginTop: '15px' }}>
-            {activity}
-            <MaterialTable
-              title="Census stats"
-              columns={[
-                { title: 'Guild', field: 'guild' },
-                { title: 'Faction', field: 'faction' },
-                { title: 'Census amount', field: 'count', type: 'numeric' },
-                { title: 'Last census', field: 'last', type: 'datetime' }
-              ]}
-              data={guildStats}
-              style={{
-                marginTop: '10px',
-                borderRadius: '15px',
-                background: 'rgba(54, 164, 170,0.8)',
-                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                borderBottom: 'none'
-              }}
-              options={{
-                pageSize: 10,
-                pageSizeOptions: [10, 50, 100],
-                sorting: true,
-                headerStyle: {
-                  background: 'rgba(24, 112, 117, 0.8)'
-                },
-                cellStyle: {
-                  borderBottom: '1px solid rgba(24, 112, 117, 0.8)'
-                },
-                filterCellStyle: {
-                  borderBottom: '1px solid rgba(24, 112, 117, 0.8)'
-                }
-              }}
-            />
-          </div>
+          <GuildActivityChart
+            width={width}
+            height={height}
+            query={query}
+            activityStats={activityStats}
+          />
         )}
+        <p className="intro" style={{ marginTop: '10px' }}>
+          The activity charts can give you a good idea about the active Wow Classic Population and
+          how many people are playing WoW Classic. Currently there is census data from the most Wow
+          Classic realms but this project aims to provide data from all the realms as well. Keep in
+          mind that the data is only as good, as of how many people are uploading their data. You
+          maybe need to select a specific time frame to get more meaningful results.
+        </p>
       </div>
     );
   }
 }
 
-export default withRouter(Overview);
+export default withRouter(Guilds);

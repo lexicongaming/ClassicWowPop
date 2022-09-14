@@ -1,0 +1,54 @@
+.line {
+  fill: none;
+  stroke-width: 1.5px;
+  opacity: 0.25;
+}
+
+.line.horde {
+  stroke: red;
+}
+
+.line.alliance {
+  stroke: blue;
+}
+
+.line.total {
+  stroke: green;
+}
+
+.title-text {
+
+}
+
+.circle-text {
+
+}
+
+.circle-legend {
+
+}
+
+.circle-group > circle {
+  opacity: 0.85;
+}
+
+.circle-group.alliance > circle,
+.circle-text.alliance,
+.title-text.alliance,
+.circle-legend.alliance {
+  fill: blue;
+}
+
+.circle-group.horde > circle,
+.circle-text.horde,
+.title-text.horde,
+.circle-legend.horde {
+  fill: red;
+}
+
+.circle-group.total > circle,
+.circle-text.total,
+.title-text.total,
+.circle-legend.total {
+  fill: green;
+}

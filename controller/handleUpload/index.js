@@ -53,6 +53,9 @@ module.exports = (uploadPath, cb) => {
         inserted: 0,
         updated: 0
       },
+     // timeGuildStats: {
+     //   inserted: 0
+     // },
       timeStats: {
         inserted: 0
       },
@@ -71,6 +74,7 @@ module.exports = (uploadPath, cb) => {
       if (
         stats.charStats.inserted !== 0 ||
         stats.charStats.inserted !== 0 ||
+        //stats.timeGuildstats.inserted !== 0 ||
         stats.timeStats.inserted !== 0
       ) {
         cachegoose.clearCache(null);

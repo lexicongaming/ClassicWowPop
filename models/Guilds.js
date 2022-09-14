@@ -14,8 +14,8 @@ const guildSchema = new Schema({
   lastSeen: { type: Date, required: true }
 });
 
-guildSchema.index({ name: 1, realm: 1 }, { unique: true });
-guildSchema.index({ name: 1, realm: 1, level: 1, lastSeen: 1 });
+guildSchema.index({ name: 1, realm: 1, faction: 1 }, { unique: true });
+guildSchema.index({ name: 1, realm: 1, faction: 1, guild: 1, level: 1, lastSeen: 1 });
 
 const Guild = mongoose.model('Guild', guildSchema);
 Guild.init();

@@ -106,7 +106,45 @@ const timesData = censusDb => {
   return flatTimesArray;
 };
 
+// traverse through times lua table and make a flat array out of it
+/* const timesGuildData = censusDb => {
+  let flatTimesArray = [];
+  Object.entries(censusDb.TimesPlus).forEach(([realm, realmData]) => {
+    Object.entries(realmData).forEach(([faction, factionData]) => {
+      Object.entries(factionData).forEach(([guild, guildData]) => {
+        Object.entries(guildData).forEach(([time, timeValue]) => {
+
+        const [times, hash] = timeValue.split(':');
+
+        if (hash) {
+          const checkString = times + realm + faction + guild + time;
+          const checkHash = StringHash(checkString);
+          if (Number(hash) !== checkHash) {
+            console.log('manipulated?', time, hash, checkHash, checkString);
+            return;
+          }
+        }
+        const guild = guild.replace(/&/g, ' ');
+        // eslint-disable-next-line prettier/prettier
+        const [druid, hunter, mage, priest, rogue, warlock, warrior, shaman, paladin, deathknight] = times.split('&');
+        // eslint-disable-next-line prettier/prettier
+        const onlineByClass = { druid, hunter, mage, priest, rogue, warlock, warrior, shaman, paladin, deathknight };
+        const onlineTotal = times.split('&').reduce((acc, current) => acc + Number(current), 0);
+        const date = new Date(`${time.replace('&', ' ')} UTC`);
+        flatTimesArray.push({ date, realm, faction, guilds, onlineByClass, onlineTotal });
+      });
+    });
+  });
+}); 
+
+
+  flatTimesArray = flatTimesArray.sort(byDateAsc);
+  return flatTimesArray;
+}; */
+
+
 module.exports = {
   charactersData,
+  //timesGuildData,
   timesData
 };

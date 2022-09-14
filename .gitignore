@@ -94,3 +94,4 @@ typings/
 .github/
 .vscode/
 package-lock.json
+stroage/

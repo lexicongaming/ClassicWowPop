@@ -6,6 +6,7 @@ const timeSchema = new Schema({
   date: { type: Date, required: true, index: true },
   realm: { type: String, required: true, index: true },
   faction: { type: String, required: true, index: true },
+  guild: { type: String, required: true, index: true },
   onlineByClass: {
     druid: { type: Number },
     hunter: { type: Number },
@@ -22,6 +23,7 @@ const timeSchema = new Schema({
 });
 
 timeSchema.index({ date: 1, realm: 1, faction: 1 });
+timeSchema.index({ date: 1, realm: 1, faction: 1, guild: 1 });
 
 const Time = mongoose.model('Time', timeSchema);
 Time.init();

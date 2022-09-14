@@ -28,6 +28,15 @@ router.get('/list/realms', (req, res, next) => {
   });
 });
 
+router.get('/list/guilds', (req, res, next) => {
+  controller.listGuilds((err, data) => {
+    if (err) {
+      return next(err);
+    }
+    return res.json(data);
+  });
+});
+
 router.get('/stats/quick', (req, res, next) => {
   controller.getQuickStats(req, (err, data) => {
     if (err) {
