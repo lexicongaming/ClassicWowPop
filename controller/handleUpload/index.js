@@ -6,8 +6,8 @@ const cachegoose = require('cachegoose');
 const process = require('./process');
 
 module.exports = (uploadPath, cb) => {
-  const currentAddonVersion = '0.9.10';
-  const validVersions = [currentAddonVersion, '0.9.4', '0.9.5', '0.9.6', '0.9.7', '0.9.8', '0.9.9'];
+  const currentAddonVersion = '0.9.11';
+  const validVersions = [currentAddonVersion, '0.9.4', '0.9.5', '0.9.6', '0.9.7', '0.9.8', '0.9.9', '0.9.10'];
   let data;
 
   // read uploaded file
@@ -19,7 +19,7 @@ module.exports = (uploadPath, cb) => {
 
   // write backup to fs
   const filename = +new Date();
-  const jsonPath = path.join('./storage/', `${filename}.zip`);
+  const jsonPath = path.join('/home/wowclas/storage/', `${filename}.zip`);
   const zip = new JSZip();
   try {
     zip.file(`${filename}.lua`, data);
@@ -53,9 +53,6 @@ module.exports = (uploadPath, cb) => {
         inserted: 0,
         updated: 0
       },
-     // timeGuildStats: {
-     //   inserted: 0
-     // },
       timeStats: {
         inserted: 0
       },
@@ -74,7 +71,6 @@ module.exports = (uploadPath, cb) => {
       if (
         stats.charStats.inserted !== 0 ||
         stats.charStats.inserted !== 0 ||
-        //stats.timeGuildstats.inserted !== 0 ||
         stats.timeStats.inserted !== 0
       ) {
         cachegoose.clearCache(null);
