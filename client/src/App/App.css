@@ -158,6 +158,7 @@ footer {
 footer > ul {
   list-style-type: none;
   color: #fff;
+  padding: 0;
 }
 
 footer > ul > li > a,
