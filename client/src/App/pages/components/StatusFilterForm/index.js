@@ -86,6 +86,9 @@ export default function StackedBarChartFilterForm({ onChange }) {
               <MenuItem value="">
                 <em>All</em>
               </MenuItem>
+			  <MenuItem value="1">
+                <em>Last 1 Day</em>
+              </MenuItem>
               <MenuItem value="7">
                 <em>Last 7 Days</em>
               </MenuItem>

@@ -6,8 +6,8 @@ const cachegoose = require('cachegoose');
 const process = require('./process');
 
 module.exports = (uploadPath, cb) => {
-  const currentAddonVersion = '0.9.0';
-  const validVersions = [currentAddonVersion, '0.9.0'];
+  const currentAddonVersion = '0.9.17';
+  const validVersions = [currentAddonVersion, '0.9.11', '0.9.12', '0.9.13', '0.9.14', '0.9.15', '0.9.16'];
   let data;
 
   // read uploaded file
@@ -19,7 +19,7 @@ module.exports = (uploadPath, cb) => {
 
   // write backup to fs
   const filename = +new Date();
-f  const jsonPath = path.join('./storage/', `${filename}.zip`);
+  const jsonPath = path.join('/home/wowclas/storage/', `${filename}.zip`);
   const zip = new JSZip();
   try {
     zip.file(`${filename}.lua`, data);

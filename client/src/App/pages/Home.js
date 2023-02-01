@@ -61,6 +61,8 @@ const Home = () => {
       <p className="intro">
         We are collecting census data from the World of Warcraft: Wotlk Classic realms with the help of an
         ingame addon and visualizes it in some fancy, filterable charts.
+		<br />
+		<span><h4>Help support the site, <a href="https://github.com/sponsors/scarecr0w12">Sponsor us today!</a></h4></span>
       </p>
       <div className="box-wrapper normal">
         {FactionPieChart}
@@ -80,6 +82,7 @@ const Home = () => {
           playing.
           <br />
           <br />
+		  <span><h4>Help support the site, <a href="https://github.com/sponsors/scarecr0w12">Sponsor us today!</a></h4></span>
         </p>
         <p>
           If you need help setting it up take a look at the{' '}

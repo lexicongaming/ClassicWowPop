@@ -26,7 +26,7 @@ class Overview extends Component {
     const { location } = this.props;
     let query = queryString.parse(location.search);
     if (Object.entries(query).length === 0) {
-      query = { lastSeen: 14, minLevel: 10 };
+      query = { lastSeen: 7, minLevel: 10 };
     }
     this.setState({ query });
     this.updateWindowDimensions();

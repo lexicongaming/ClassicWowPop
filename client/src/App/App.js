@@ -33,7 +33,13 @@ class App extends Component {
           <footer>
             <ul>
               <li>
-                <Link to="./status">Status</Link>
+                <Link to="./status">Status</Link><br />
+              </li>
+              <li>
+                <a href="https://github.com/sponsors/scarecr0w12">Sponsor Us</a><br />
+              </li>
+			  <li>
+                <a href="https://www.thecorehosting.net">Proudly Hosting by The Core Hosting, LLC</a>
               </li>
             </ul>
             <p>
