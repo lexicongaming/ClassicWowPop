@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const cachegoose = require('cachegoose');
 const apiRouter = require('./routes/api');
 
-mongoose.connect("mongodb://localhost:27017/census", { useNewUrlParser: true, poolSize: 20 });
+mongoose.connect('mongodb://localhost:27017/census', { useNewUrlParser: true, poolSize: 20 }); //Needs correct connection details
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useUnifiedTopology', true);
@@ -41,7 +41,7 @@ app.use((err, req, res, next) => {
   const errMessage = err.message || 'Internal Server Error';
 
   res.json({ error: errMessage });
-  Sentry.captureException(err)
+  Sentry.captureException(err);
 });
 
 const port = process.env.PORT || 5000;
