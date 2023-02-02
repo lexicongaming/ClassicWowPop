@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 const cachegoose = require('cachegoose');
 const apiRouter = require('./routes/api');
 
-mongoose.connect('mongodb://localhost:27017/census', { useNewUrlParser: true, poolSize: 20 }); //Needs correct connection details
+const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/census';
+mongoose.connect(mongoUrl, { useNewUrlParser: true, poolSize: 20 }); //Needs correct connection details
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useUnifiedTopology', true);

@@ -19,7 +19,8 @@ module.exports = (uploadPath, cb) => {
 
   // write backup to fs
   const filename = +new Date();
-  const jsonPath = path.join('/home/wowclas/storage/', `${filename}.zip`);
+  const storagePath = process.env.STORAGE_PATH || '/home/wowclas/storage/';
+  const jsonPath = path.join(storagePath, `${filename}.zip`);
   const zip = new JSZip();
   try {
     zip.file(`${filename}.lua`, data);
