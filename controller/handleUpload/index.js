@@ -3,7 +3,7 @@ const path = require('path');
 const JSZip = require('jszip');
 const luaToJson = require('lua-to-json');
 const cachegoose = require('cachegoose');
-const process = require('./process');
+const processor = require('./process');
 
 module.exports = (uploadPath, cb) => {
   const currentAddonVersion = '0.9.11';
@@ -64,7 +64,7 @@ module.exports = (uploadPath, cb) => {
   }
 
   // process the uploaded data
-  process.censusData(censusDb, (error, stats) => {
+  processor.censusData(censusDb, (error, stats) => {
     if (error) return cb(error);
     if (stats) {
       const retStats = { ...stats };

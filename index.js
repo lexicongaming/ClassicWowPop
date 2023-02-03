@@ -42,7 +42,7 @@ app.use((err, req, res, next) => {
   const errMessage = err.message || 'Internal Server Error';
 
   res.json({ error: errMessage });
-  Sentry.captureException(err);
+  // Sentry.captureException(err);
 });
 
 const port = process.env.PORT || 5000;
