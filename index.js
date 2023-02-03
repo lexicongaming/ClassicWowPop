@@ -43,6 +43,7 @@ app.use((err, req, res, next) => {
 
   res.json({ error: errMessage });
   // Sentry.captureException(err);
+  console.error(err)
 });
 
 const port = process.env.PORT || 5000;
