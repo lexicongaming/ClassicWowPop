@@ -7,7 +7,7 @@ class BackgroundVideo extends Component {
     super(props);
 
     this.state = {
-      videoURL: 'videos/wowclassic.webp'
+      videoURL: 'videos/wowclassic.webm'
     };
   }
 
